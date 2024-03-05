@@ -5,13 +5,11 @@ EXERCICIOS PARA VAGA DE ESTÁGIO
 2)código em .c
 
 #include <stdio.h>
-
 int main()
 {
     int num, a = 0, b = 1, c;
     printf("Digite um numero: ");
     scanf("%d", &num);
-    
     while (b <= num || num == 0) {
         if (num == 0 || num == 1) {
         printf("\nO numero %d pertence a sequencia de fibonacci", num);
@@ -25,7 +23,6 @@ int main()
             break;
         }
     }
-    
     if(b != num && num != 0){
         printf("\nO numero %d NÃO pertence a sequencia de fibonacci", num);
     }
@@ -50,19 +47,15 @@ int main() {
     char frase[99];
     printf("Digite uma frase: ");
     scanf("%[^\n]", frase);
-
     int tamanho = strlen(frase);
     int i, j;
     char temp;
-
     for (i = 0, j = tamanho - 1; i < j; i++, j--) {
         temp = frase[i];
         frase[i] = frase[j];
         frase[j] = temp;
     }
-
     printf("Frase invertida: %s\n", frase);
-
     return 0;
 }
 
